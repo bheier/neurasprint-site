@@ -235,7 +235,7 @@ function Intake({ form, updateField, onSubmit }: { form: any; updateField: (k: s
         <Multi label="Compliance needs" value={form.compliance} onChange={(v) => updateField("compliance", v)} options={["ISO", "HIPAA", "ITAR", "None/Unknown"]} />
         <Multi label="Data locations" value={form.dataLocations} onChange={(v) => updateField("dataLocations", v)} options={["SharePoint/OneDrive", "Google Drive", "Email", "Databases", "APIs only"]} />
         <Select label="Who approves changes?" value={form.approver} onChange={(v) => updateField("approver", v)} options={["Owner", "Ops lead", "IT", "Compliance"]} />
-        <Select label="Budget comfort for a 30‑day sprint" value={form.budget} onChange={(v) => updateField("budget", v)} options=["<$5k", "$5–10k", "$10–20k", ">$20k"] />
+        <Select label="10) Budget comfort for a 30-day sprint" value={form.budget} onChange={(v) => updateField("budget", v)} options={["<$5k", "$5–10k", "$10–20k", ">$20k"]}/>
         <Select label="Ideal start date" value={form.startDate} onChange={(v) => updateField("startDate", v)} options={["ASAP", "<30 days", "Next quarter"]} />
       </div>
       <div className="mt-6 flex flex-wrap gap-3">
