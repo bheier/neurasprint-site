@@ -225,19 +225,103 @@ function Intake({ form, updateField, onSubmit }: { form: any; updateField: (k: s
       }}
       className="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm"
     >
-      <div className="grid md:grid-cols-2 gap-6">
-        <Select label="1) Industry" value={form.industry} onChange={(v) => updateField("industry", v)} options={["Manufacturing", "Professional Services", "Logistics", "Healthcare Admin", "Other"]} />
-        <Select label="2) Team size" value={form.teamSize} onChange={(v) => updateField("teamSize", v)} options={["1-9", "10-49", "50-199", "200-400", "400+"]} />
-        <Select label="#1 outcome this quarter" value={form.outcome} onChange={(v) => updateField("outcome", v)} options={["Revenue", "Cycle time", "Error rate", "Cost"]} />
-        <Select label="Biggest drag today" value={form.drag} onChange={(v) => updateField("drag", v)} options={["Email triage", "Approvals", "Docs & forms", "Reporting", "Customer support"]} />
-        <Multi label="Daily tools" value={form.tools} onChange={(v) => updateField("tools", v)} options={["O365/Teams", "SharePoint", "Google Workspace", "Slack", "Salesforce", "HubSpot", "NetSuite/ERP", "EHR", "Other"]} />
-        <Select label="Hours/week lost to copy‑paste/hunting" value={form.hoursLost} onChange={(v) => updateField("hoursLost", v)} options={["<5", "5–10", "10–20", "20+"]} />
-        <Multi label="Compliance needs" value={form.compliance} onChange={(v) => updateField("compliance", v)} options={["ISO", "HIPAA", "ITAR", "None/Unknown"]} />
-        <Multi label="Data locations" value={form.dataLocations} onChange={(v) => updateField("dataLocations", v)} options={["SharePoint/OneDrive", "Google Drive", "Email", "Databases", "APIs only"]} />
-        <Select label="Who approves changes?" value={form.approver} onChange={(v) => updateField("approver", v)} options={["Owner", "Ops lead", "IT", "Compliance"]} />
-        <Select label="10) Budget comfort for a 30-day sprint" value={form.budget} onChange={(v) => updateField("budget", v)} options={["<$5k", "$5–10k", "$10–20k", ">$20k"]}/>
-        <Select label="Ideal start date" value={form.startDate} onChange={(v) => updateField("startDate", v)} options={["ASAP", "<30 days", "Next quarter"]} />
-      </div>
+<div className="grid md:grid-cols-2 gap-6">
+  <Select
+    label="1) Industry"
+    value={form.industry}
+    onChange={(v) => updateField("industry", v)}
+    options={[
+      "Manufacturing",
+      "Professional Services",
+      "Logistics",
+      "Healthcare Admin",
+      "Other",
+    ]}
+  />
+  <Select
+    label="2) Team size"
+    value={form.teamSize}
+    onChange={(v) => updateField("teamSize", v)}
+    options={["1-9", "10-49", "50-199", "200-400", "400+"]}
+  />
+  <Select
+    label="3) #1 outcome this quarter"
+    value={form.outcome}
+    onChange={(v) => updateField("outcome", v)}
+    options={["Revenue", "Cycle time", "Error rate", "Cost"]}
+  />
+  <Select
+    label="4) Biggest drag today"
+    value={form.drag}
+    onChange={(v) => updateField("drag", v)}
+    options={[
+      "Email triage",
+      "Approvals",
+      "Docs & forms",
+      "Reporting",
+      "Customer support",
+    ]}
+  />
+  <Multi
+    label="5) Daily tools"
+    value={form.tools}
+    onChange={(v) => updateField("tools", v)}
+    options={[
+      "O365/Teams",
+      "SharePoint",
+      "Google Workspace",
+      "Slack",
+      "Salesforce",
+      "HubSpot",
+      "NetSuite/ERP",
+      "EHR",
+      "Other",
+    ]}
+  />
+  <Select
+    label="6) Hours/week lost to copy-paste/hunting"
+    value={form.hoursLost}
+    onChange={(v) => updateField("hoursLost", v)}
+    options={["<5", "5–10", "10–20", "20+"]}
+  />
+  <Multi
+    label="7) Compliance needs"
+    value={form.compliance}
+    onChange={(v) => updateField("compliance", v)}
+    options={["ISO", "HIPAA", "ITAR", "None/Unknown"]}
+  />
+  <Multi
+    label="8) Data locations"
+    value={form.dataLocations}
+    onChange={(v) => updateField("dataLocations", v)}
+    options={[
+      "SharePoint/OneDrive",
+      "Google Drive",
+      "Email",
+      "Databases",
+      "APIs only",
+    ]}
+  />
+  <Select
+    label="9) Who approves changes?"
+    value={form.approver}
+    onChange={(v) => updateField("approver", v)}
+    options={["Owner", "Ops lead", "IT", "Compliance"]}
+  />
+  <Select
+    label="10) Budget comfort for a 30-day sprint"
+    value={form.budget}
+    onChange={(v) => updateField("budget", v)}
+    options={["<$5k", "$5–10k", "$10–20k", ">$20k"]}
+  />
+  <Select
+    label="11) Ideal start date"
+    value={form.startDate}
+    onChange={(v) => updateField("startDate", v)}
+    options={["ASAP", "<30 days", "Next quarter"]}
+  />
+</div>
+
       <div className="mt-6 flex flex-wrap gap-3">
         <button type="submit" className="px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800">Get recommendation</button>
         <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="px-5 py-3 rounded-xl border border-slate-300 font-medium hover:bg-slate-50">Book a call instead</a>
