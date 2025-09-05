@@ -1,6 +1,6 @@
 import Image from "next/image";
 // If you DO NOT have the "@" alias in tsconfig, use the relative import:
-import IntakeForm from "../components/IntakeForm";
+import IntakeForm from "@/components/IntakeForm";
 // If you DO have the alias, use:
 // import IntakeForm from "@/components/IntakeForm";
 
