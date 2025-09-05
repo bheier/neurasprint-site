@@ -1,1 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="10" y1="54" x2="54" y2="10" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E66FF"/>
+      <stop offset="1" stop-color="#00B3FF"/>
+    </linearGradient>
+  </defs>
+  <!-- dark tile so the gradient pops in small favicons -->
+  <rect width="64" height="64" rx="12" fill="#03060F"/>
+  <!-- planet -->
+  <circle cx="32" cy="32" r="18" fill="url(#g)" />
+  <circle cx="32" cy="32" r="14" fill="white" opacity="0.12"/>
+  <!-- orbit + node -->
+  <path d="M10 40c8-8 26-13 40-10" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="48" cy="29" r="3" fill="white"/>
+  <!-- NS -->
+  <g font-family="Inter, Segoe UI, Arial" font-weight="800" font-size="16" text-anchor="middle" fill="white">
+    <text x="32" y="37">NS</text>
+  </g>
+</svg>
 
