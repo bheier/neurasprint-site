@@ -1,10 +1,12 @@
 import Image from "next/image";
-import IntakeForm from "@/components/IntakeForm";
+// If you DO NOT have the "@" alias in tsconfig, use the relative import:
+import IntakeForm from "../components/IntakeForm";
+// If you DO have the alias, use:
+// import IntakeForm from "@/components/IntakeForm";
 
 export default function HomePage() {
   return (
     <main className="mx-auto max-w-6xl px-4 sm:px-6 py-12 space-y-12">
-      {/* Hero */}
       <section className="grid lg:grid-cols-2 gap-10 items-center">
         <div className="space-y-6">
           <div className="flex items-center gap-3">
@@ -20,7 +22,8 @@ export default function HomePage() {
             </h1>
           </div>
           <p className="text-slate-600">
-            We find quick wins in your stack (Google/Microsoft, Slack, Salesforce, etc.), build fast, and prove value in a single sprint.
+            We find quick wins in your stack (Google/Microsoft, Slack, Salesforce, etc.),
+            build fast, and prove value in a single sprint.
           </p>
           <a
             href={process.env.NEXT_PUBLIC_CALENDLY_URL}
@@ -30,7 +33,6 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Intake form */}
         <div className="rounded-xl border border-slate-200 p-6 shadow-sm bg-white">
           <h2 className="text-lg font-semibold mb-4">Tell us a bit about your work</h2>
           <IntakeForm />
