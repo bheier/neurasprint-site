@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "NeuraSprint AI — Automation at Sprint Speed",
   description:
     "Ship automations in weeks, not quarters. NeuraSprint AI delivers 3–4 lightweight automations in 30 days.",
-  icons: { icon: "/favicon.svg" },
+  icons: {
+  icon: "/favicon.svg?v=2",            // cache-bust
+  apple: "/favicon.svg?v=2",
+  },
   openGraph: {
     title: "NeuraSprint AI",
     description: "Operational automations in 30 days.",
