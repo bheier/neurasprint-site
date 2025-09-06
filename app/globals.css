@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
+:root { color-scheme: light; }
+
+.bg-hero {
+  /* deep space gradient with electric blue glow */
+  background:
+    radial-gradient(1200px 500px at -10% -20%, rgba(47, 128, 237, .35), transparent 60%),
+    radial-gradient(800px 400px at 110% 20%, rgba(0, 179, 255, .25), transparent 55%),
+    linear-gradient(180deg, #0a1020 0%, #0b1226 60%, #0b1226 100%);
 }
-html, body { height: 100%; }
+
+.text-brand { color: #24b1ff; } /* tweak if you want a slightly different neon */
+
