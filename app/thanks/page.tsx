@@ -1,12 +1,12 @@
+// app/thanks/page.tsx
 export default function Thanks() {
   return (
-    <main style={{ maxWidth: 720, margin: "0 auto", padding: "2rem 1rem" }}>
-      <h1>Thanks — we got your request!</h1>
+    <main className="mx-auto max-w-2xl px-4 sm:px-6 py-12 space-y-4">
+      <h1 className="text-3xl font-bold">Thanks — we got your request!</h1>
       <p>We’ll reply within one business day with next steps.</p>
-      <ul>
-        <li>Check your email for a confirmation.</li>
-        <li>Want to move faster? <a href="/book">Book a quick intro call</a>.</li>
-      </ul>
+      <a href={process.env.NEXT_PUBLIC_CALENDLY_URL} className="inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700">
+        Want to move faster? Book a call
+      </a>
     </main>
   );
 }
