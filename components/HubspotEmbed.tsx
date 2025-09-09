@@ -4,10 +4,12 @@ import Script from "next/script";
 export default function HubspotEmbed() {
   return (
     <>
+      {/* HubSpot’s embed script */}
       <Script
         src="https://js-na2.hsforms.net/forms/embed/243814167.js"
         strategy="lazyOnload"
       />
+      {/* HubSpot replaces this div with your form */}
       <div
         className="hs-form-frame"
         data-region="na2"
@@ -17,3 +19,4 @@ export default function HubspotEmbed() {
     </>
   );
 }
+
