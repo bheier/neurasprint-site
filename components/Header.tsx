@@ -11,21 +11,20 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/70 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
-          {/* Home button with emblem */}
+          {/* Home button with larger, responsive emblem */}
           <Link
             href="/"
             aria-label="NeuraSprint AI — Home"
             className="flex items-center gap-3"
           >
             <Image
-              src="/logo-emblem.png"     // <-- emblem in /public
+              src="/logo-emblem.png" // must be in /public
               alt="NeuraSprint AI emblem"
-              width={42}
-              height={42}
+              width={64}
+              height={64}
               priority
-              className="h-10 w-10 rounded-lg md:h-12 md:w-12"
+              className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-lg"
             />
-            {/* keep brand text hidden so emblem is the mark; helps screen readers */}
             <span className="sr-only">NeuraSprint AI</span>
           </Link>
 
@@ -58,7 +57,13 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={open}
           >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               {open ? (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               ) : (
