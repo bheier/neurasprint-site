@@ -1,5 +1,5 @@
 // app/page.tsx
-import { TopLeftLogoTagline } from "./components/TopLeftLogoTagline";
+import { TopLeftLogoTagline } from "../components/TopLeftLogoTagline";
 // If your intake form is a component, import it here:
 // import { IntakeForm } from "./components/IntakeForm";
 
