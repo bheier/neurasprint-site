@@ -1,11 +1,10 @@
 // app/page.tsx
 import { TopLeftLogoTagline } from "@/components/TopLeftLogoTagline";
-// ⬆️ If you moved the file into app/components, change to "./components/TopLeftLogoTagline"
-
-// If your intake form is a component, import it here:
-import { IntakeForm } from "@/components/IntakeForm"; // or your real path/name
+import { IntakeForm } from "@/components/IntakeForm"; // keep this path/name to your actual form
 
 export default function HomePage() {
+  const calendly = process.env.NEXT_PUBLIC_CALENDLY_URL || "#book";
+
   return (
     <main className="mx-auto max-w-6xl px-4 sm:px-6 py-10">
       {/* HERO CARD (dark background, rounded, shadow) */}
@@ -17,7 +16,7 @@ export default function HomePage() {
             <div>
               <TopLeftLogoTagline />
 
-              {/* === Your existing hero copy/CTAs (left) === */}
+              {/* Hero copy/CTAs */}
               <div className="mt-6">
                 <span className="inline-flex items-center rounded-full bg-slate-800/60 px-3 py-1 text-xs font-medium text-slate-200">
                   Sprint-built automations
@@ -34,7 +33,7 @@ export default function HomePage() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
-                    href={process.env.NEXT_PUBLIC_CALENDLY_URL}
+                    href={calendly}
                     className="rounded-xl bg-white text-slate-900 px-4 py-2 font-semibold hover:bg-slate-100"
                   >
                     Book a Discovery Call
@@ -47,19 +46,19 @@ export default function HomePage() {
                   </a>
                 </div>
               </div>
-              {/* === End hero copy === */}
             </div>
 
-            {/* RIGHT column — your questionnaire/form card (unchanged) */}
+            {/* RIGHT column — questionnaire/form card */}
             <div id="intake">
-              {/* ⬇️ Mount your real form component or inline JSX here. Keep its existing styles. */}
-              {/* <IntakeForm /> */}
+              <div className="rounded-2xl border border-white/10 bg-white p-4 sm:p-5 shadow-xl">
+                <IntakeForm />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Other homepage sections go below */}
+      {/* Other homepage sections… */}
       {/* <SectionFeatures /> */}
       {/* <SectionLogos /> */}
       {/* <SectionFAQs /> */}
