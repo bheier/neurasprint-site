@@ -3,7 +3,7 @@ import { TopLeftLogoTagline } from "../components/TopLeftLogoTagline";
 // ⬆️ If you moved the file into app/components, change to "./components/TopLeftLogoTagline"
 
 // If your intake form is a component, import it here:
-// import { IntakeForm } from "../components/IntakeForm"; // or your real path/name
+import { IntakeForm } from "../components/IntakeForm"; // or your real path/name
 
 export default function HomePage() {
   return (
