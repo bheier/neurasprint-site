@@ -1,6 +1,6 @@
 // app/page.tsx
 import { TopLeftLogoTagline } from "@/components/TopLeftLogoTagline";
-import { IntakeForm } from "@/components/IntakeForm"; // keep this path/name to your actual form
+import IntakeForm from "@/components/IntakeForm";
 
 export default function HomePage() {
   const calendly = process.env.NEXT_PUBLIC_CALENDLY_URL || "#book";
